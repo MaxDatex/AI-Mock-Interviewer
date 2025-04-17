@@ -1,0 +1,212 @@
+[
+  {
+    "id": 0,
+    "topic": "Array Manipulation",
+    "link": "https://leetcode.com/problems/two-sum",
+    "problem_name": "Two sum",
+    "difficulty": "Easy",
+    "companies": [
+      "OpenAI",
+      "Google",
+      "Amazon",
+      "Meta",
+      "Netflix",
+      "Apple"
+    ],
+    "content": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.\n\n \n\nExample 1:\n\nInput: nums = [2,7,11,15], target = 9\nOutput: [0,1]\nExplanation: Because nums[0] + nums[1] == 9, we return [0, 1].\n\nExample 2:\n\nInput: nums = [3,2,4], target = 6\nOutput: [1,2]\n\nExample 3:\n\nInput: nums = [3,3], target = 6\nOutput: [0,1]\n\n \n\nConstraints:\n\n    2 <= nums.length <= 104\n    -109 <= nums[i] <= 109\n    -109 <= target <= 109\n    Only one valid answer exists.\n\n",
+    "code": "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n"
+  },
+  
+  {
+    "id": 1,
+    "topic": "Array Manipulation",
+    "link": "https://leetcode.com/problems/container-with-most-water",
+    "problem_name": "Container with most water",
+    "difficulty": "Medium",
+    "companies": [
+      "Google",
+      "Amazon"
+    ],
+    "content": "'You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).\n\nFind two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.\n\nNotice that you may not slant the container.\n\n \n\nExample 1:\n\nInput: height = [1,8,6,2,5,4,8,3,7]\nOutput: 49\nExplanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n\nExample 2:\n\nInput: height = [1,1]\nOutput: 1\n\n \n\nConstraints:\n\n    n == height.length\n    2 <= n <= 105\n    0 <= height[i] <= 104\n\n'",
+    "code": "class Solution:\n    def maxArea(self, height: List[int]) -> int:\n"
+  },
+  {
+    "id": 2,
+    "topic": "Array Manipulation",
+    "link": "https://leetcode.com/problems/3sum",
+    "problem_name": "3sum",
+    "difficulty": "Medium",
+    "companies": [
+      "OpenAI",
+      "Google",
+      "Amazon",
+      "Meta",
+      "Netflix",
+      "Apple"
+    ],
+    "content": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.\n\n \n\nExample 1:\n\nInput: nums = [-1,0,1,2,-1,-4]\nOutput: [[-1,-1,2],[-1,0,1]]\nExplanation: \nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n\nExample 2:\n\nInput: nums = [0,1,1]\nOutput: []\nExplanation: The only possible triplet does not sum up to 0.\n\nExample 3:\n\nInput: nums = [0,0,0]\nOutput: [[0,0,0]]\nExplanation: The only possible triplet sums up to 0.\n\n \n\nConstraints:\n\n    3 <= nums.length <= 3000\n    -105 <= nums[i] <= 105\n\n",
+    "code": "class Solution:\n    def threeSum(self, nums: List[int]) -> List[List[int]]:\n"
+  },
+  {
+    "id": 3,
+    "topic": "String Manipulation",
+    "link": "https://leetcode.com/problems/longest-substring-without-repeating-characters",
+    "problem_name": "Longest substring without repeating characters",
+    "difficulty": "Medium",
+    "companies": [
+      "OpenAI",
+      "Google",
+      "Amazon",
+      "Meta",
+      "Netflix",
+      "Apple"
+    ],
+    "content": "Given a string s, find the length of the longest\n\nwithout duplicate characters.\n\n \n\nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3.\n\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n \n\nConstraints:\n\n    0 <= s.length <= 5 * 104\n    s consists of English letters, digits, symbols and spaces.\n",
+    "code": "class Solution:\n    def lengthOfLongestSubstring(self, s: str) -> int:\n"
+  },
+  {
+    "id": 4,
+    "topic": "String Manipulation",
+    "link": "https://leetcode.com/problems/string-to-integer-atoi",
+    "problem_name": "String to integer (atoi)",
+    "difficulty": "Medium",
+    "companies": [
+      "Meta",
+      "Amazon"
+    ],
+    "content": "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.\n\nThe algorithm for myAtoi(string s) is as follows:\n\n    Whitespace: Ignore any leading whitespace (' ').\n    Signedness: Determine the sign by checking if the next character is '-' or '+', assuming positivity if neither present.\n    Conversion: Read the integer by skipping leading zeros until a non-digit character is encountered or the end of the string is reached. If no digits were read, then the result is 0.\n    Rounding: If the integer is out of the 32-bit signed integer range [-231, 231 - 1], then round the integer to remain in the range. Specifically, integers less than -231 should be rounded to -231, and integers greater than 231 - 1 should be rounded to 231 - 1.\n\nReturn the integer as the final result.\n\n \n\nExample 1:\n\nInput: s = '42'\n\nOutput: 42\n\nExplanation:\n\nThe underlined characters are what is read in and the caret is the current reader position.\nStep 1: '42' (no characters read because there is no leading whitespace)\n         ^\nStep 2: '42' (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: '42' ('42' is read in)\n           ^\n\nExample 2:\n\nInput: s = ' -042'\n\nOutput: -42\n\nExplanation:\n\nStep 1: '   -042' (leading whitespace is read and ignored)\n            ^\nStep 2: '   -042' ('-' is read, so the result should be negative)\n             ^\nStep 3: '   -042' ('042' is read in, leading zeros ignored in the result)\n               ^\n\nExample 3:\n\nInput: s = '1337c0d3'\n\nOutput: 1337\n\nExplanation:\n\nStep 1: '1337c0d3' (no characters read because there is no leading whitespace)\n         ^\nStep 2: '1337c0d3' (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: '1337c0d3' ('1337' is read in; reading stops because the next character is a non-digit)\n             ^\n\nExample 4:\n\nInput: s = '0-1'\n\nOutput: 0\n\nExplanation:\n\nStep 1: '0-1' (no characters read because there is no leading whitespace)\n         ^\nStep 2: '0-1' (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: '0-1' ('0' is read in; reading stops because the next character is a non-digit)\n          ^\n\nExample 5:\n\nInput: s = 'words and 987'\n\nOutput: 0\n\nExplanation:\n\nReading stops at the first non-digit character 'w'.\n\n \n\nConstraints:\n\n    0 <= s.length <= 200\n    s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.\n\n",
+    "code": "class Solution:\n    def myAtoi(self, s: str) -> int:\n"
+  },
+  {
+    "id": 5,
+    "topic": "String Manipulation",
+    "link": "https://leetcode.com/problems/minimum-window-substring",
+    "problem_name": "Minimum window substring",
+    "difficulty": "Hard",
+    "companies": [
+      "Meta",
+      "Amazon"
+    ],
+    "content": "Given two strings s and t of lengths m and n respectively, return the minimum window\n\nof s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string ''.\n\nThe testcases will be generated such that the answer is unique.\n\n \n\nExample 1:\n\nInput: s = 'ADOBECODEBANC', t = 'ABC'\nOutput: 'BANC'\nExplanation: The minimum window substring 'BANC' includes 'A', 'B', and 'C' from string t.\n\nExample 2:\n\nInput: s = 'a', t = 'a'\nOutput: 'a'\nExplanation: The entire string s is the minimum window.\n\nExample 3:\n\nInput: s = 'a', t = 'aa'\nOutput: ''\nExplanation: Both 'a's from t must be included in the window.\nSince the largest window of s only has one 'a', return empty string.\n\n \n\nConstraints:\n\n    m == s.length\n    n == t.length\n    1 <= m, n <= 105\n    s and t consist of uppercase and lowercase English letters.\n",
+    "code": "class Solution:\n    def minWindow(self, s: str, t: str) -> str:\n"
+  },
+  {
+    "id": 6,
+    "topic": "Linked Lists",
+    "link": "https://leetcode.com/problems/add-two-numbers",
+    "problem_name": "Add two numbers",
+    "difficulty": "Medium",
+    "companies": [
+      "Meta",
+      "Amazon"
+    ],
+    "content": "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\n\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\n\n \n\nExample 1:\n\nInput: l1 = [2,4,3], l2 = [5,6,4]\nOutput: [7,0,8]\nExplanation: 342 + 465 = 807.\n\nExample 2:\n\nInput: l1 = [0], l2 = [0]\nOutput: [0]\n\nExample 3:\n\nInput: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\nOutput: [8,9,9,9,0,0,0,1]\n\n \n\nConstraints:\n\n    The number of nodes in each linked list is in the range [1, 100].\n    0 <= Node.val <= 9\n    It is guaranteed that the list represents a number that does not have leading zeros.\n\n",
+    "code": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:\n "
+  },
+  {
+    "id": 7,
+    "topic": "Linked Lists",
+    "link": "https://leetcode.com/problems/merge-two-sorted-lists",
+    "problem_name": "Merge two sorted lists",
+    "difficulty": "Easy",
+    "companies": [
+      "Meta",
+      "Amazon"
+    ],
+    "content": "You are given the heads of two sorted linked lists list1 and list2.\n\nMerge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.\n\nReturn the head of the merged linked list.\n\n \n\nExample 1:\n\nInput: list1 = [1,2,4], list2 = [1,3,4]\nOutput: [1,1,2,3,4,4]\n\nExample 2:\n\nInput: list1 = [], list2 = []\nOutput: []\n\nExample 3:\n\nInput: list1 = [], list2 = [0]\nOutput: [0]\n\n \n\nConstraints:\n\n    The number of nodes in both lists is in the range [0, 50].\n    -100 <= Node.val <= 100\n    Both list1 and list2 are sorted in non-decreasing order.\n\n",
+    "code": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:\n"
+  },
+  {
+    "id": 8,
+    "topic": "Linked Lists",
+    "link": "https://leetcode.com/problems/reorder-list",
+    "problem_name": "Reorder list",
+    "difficulty": "Medium",
+    "companies": [
+      "Meta"
+    ],
+    "content": "You are given the head of a singly linked-list. The list can be represented as:\n\nL0 → L1 → … → Ln - 1 → Ln\n\nReorder the list to be on the following form:\n\nL0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …\n\nYou may not modify the values in the list's nodes. Only nodes themselves may be changed.\n\n \n\nExample 1:\n\nInput: head = [1,2,3,4]\nOutput: [1,4,2,3]\n\nExample 2:\n\nInput: head = [1,2,3,4,5]\nOutput: [1,5,2,4,3]\n\n \n\nConstraints:\n\n    The number of nodes in the list is in the range [1, 5 * 104].\n    1 <= Node.val <= 1000\n\n",
+    "code": "# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def reorderList(self, head: Optional[ListNode]) -> None:\n        '''\n        Do not return anything, modify head in-place instead.\n        '''\n"
+  },
+  {
+    "id": 9,
+    "topic": "Trees and Graphs",
+    "link": "https://leetcode.com/problems/number-of-islands",
+    "problem_name": "Number of islands",
+    "difficulty": "Medium",
+    "companies": [
+      "OpenAI",
+      "Google",
+      "Amazon",
+      "Meta",
+      "Netflix",
+      "Apple"
+    ],
+    "content": "Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.\n\nAn island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\n\n \n\nExample 1:\n\nInput: grid = [\n  ['1','1','1','1','0'],\n  ['1','1','0','1','0'],\n  ['1','1','0','0','0'],\n  ['0','0','0','0','0']\n]\nOutput: 1\n\nExample 2:\n\nInput: grid = [\n  ['1','1','0','0','0'],\n  ['1','1','0','0','0'],\n  ['0','0','1','0','0'],\n  ['0','0','0','1','1']\n]\nOutput: 3\n\n \n\nConstraints:\n\n    m == grid.length\n    n == grid[i].length\n    1 <= m, n <= 300\n    grid[i][j] is '0' or '1'.\n\n",
+    "code": "class Solution:\n    def numIslands(self, grid: List[List[str]]) -> int:\n"
+  },
+  {
+    "id": 10,
+    "topic": "Trees and Graphs",
+    "link": "https://leetcode.com/problems/binary-tree-maximum-path-sum",
+    "problem_name": "Binary tree maximum path sum",
+    "difficulty": "Hard",
+    "companies": [
+      "Google",
+      "Meta"
+    ],
+    "content": "A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.\n\nThe path sum of a path is the sum of the node's values in the path.\n\nGiven the root of a binary tree, return the maximum path sum of any non-empty path.\n\n \n\nExample 1:\n\nInput: root = [1,2,3]\nOutput: 6\nExplanation: The optimal path is 2 -> 1 -> 3 with a path sum of 2 + 1 + 3 = 6.\n\nExample 2:\n\nInput: root = [-10,9,20,null,null,15,7]\nOutput: 42\nExplanation: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42.\n\n \n\nConstraints:\n\n    The number of nodes in the tree is in the range [1, 3 * 104].\n    -1000 <= Node.val <= 1000\n\n",
+    "code": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def maxPathSum(self, root: Optional[TreeNode]) -> int:\n"
+  },
+  {
+    "id": 11,
+    "topic": "Trees and Graphs",
+    "link": "https://leetcode.com/problems/clone-graph",
+    "problem_name": "Clone graph",
+    "difficulty": "Medium",
+    "companies": [
+      "Meta"
+    ],
+    "content": "Given a reference of a node in a connected undirected graph.\n\nReturn a deep copy (clone) of the graph.\n\nEach node in the graph contains a value (int) and a list (List[Node]) of its neighbors.\n\nclass Node {\n    public int val;\n    public List<Node> neighbors;\n}\n\n \n\nTest case format:\n\nFor simplicity, each node's value is the same as the node's index (1-indexed). For example, the first node with val == 1, the second node with val == 2, and so on. The graph is represented in the test case using an adjacency list.\n\nAn adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph.\n\nThe given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph.\n\n \n\nExample 1:\n\nInput: adjList = [[2,4],[1,3],[2,4],[1,3]]\nOutput: [[2,4],[1,3],[2,4],[1,3]]\nExplanation: There are 4 nodes in the graph.\n1st node (val = 1)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).\n2nd node (val = 2)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).\n3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).\n4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).\n\nExample 2:\n\nInput: adjList = [[]]\nOutput: [[]]\nExplanation: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.\n\nExample 3:\n\nInput: adjList = []\nOutput: []\nExplanation: This an empty graph, it does not have any nodes.\n\n \n\nConstraints:\n\n    The number of nodes in the graph is in the range [0, 100].\n    1 <= Node.val <= 100\n    Node.val is unique for each node.\n    There are no repeated edges and no self-loops in the graph.\n    The Graph is connected and all nodes can be visited starting from the given node.\n\n",
+    "code": "'''\n# Definition for a Node.\nclass Node:\n    def __init__(self, val = 0, neighbors = None):\n        self.val = val\n        self.neighbors = neighbors if neighbors is not None else []\n'''\n\nfrom typing import Optional\nclass Solution:\n    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:\n "
+  },
+  {
+    "id": 12,
+    "topic": "Dynamic Programming",
+    "link": "https://leetcode.com/problems/word-break",
+    "problem_name": "Word break",
+    "difficulty": "Medium",
+    "companies": [
+      "Meta",
+      "Amazon"
+    ],
+    "content": "Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.\n\nNote that the same word in the dictionary may be reused multiple times in the segmentation.\n\n \n\nExample 1:\n\nInput: s = 'leetcode', wordDict = ['leet','code']\nOutput: true\nExplanation: Return true because 'leetcode' can be segmented as 'leet code'.\n\nExample 2:\n\nInput: s = 'applepenapple', wordDict = ['apple','pen']\nOutput: true\nExplanation: Return true because 'applepenapple' can be segmented as 'apple pen apple'.\nNote that you are allowed to reuse a dictionary word.\n\nExample 3:\n\nInput: s = 'catsandog', wordDict = ['cats','dog','sand','and','cat']\nOutput: false\n\n \n\nConstraints:\n\n    1 <= s.length <= 300\n    1 <= wordDict.length <= 1000\n    1 <= wordDict[i].length <= 20\n    s and wordDict[i] consist of only lowercase English letters.\n    All the strings of wordDict are unique.\n\n",
+    "code": "class Solution:\n    def wordBreak(self, s: str, wordDict: List[str]) -> bool:\n"
+  },
+  {
+    "id": 13,
+    "topic": "Dynamic Programming",
+    "link": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix",
+    "problem_name": "Longest increasing path in a matrix",
+    "difficulty": "Hard",
+    "companies": [
+      "Google",
+      "Amazon"
+    ],
+    "content": "Given an m x n integers matrix, return the length of the longest increasing path in matrix.\n\nFrom each cell, you can either move in four directions: left, right, up, or down. You may not move diagonally or move outside the boundary (i.e., wrap-around is not allowed).\n\n \n\nExample 1:\n\nInput: matrix = [[9,9,4],[6,6,8],[2,1,1]]\nOutput: 4\nExplanation: The longest increasing path is [1, 2, 6, 9].\n\nExample 2:\n\nInput: matrix = [[3,4,5],[3,2,6],[2,2,1]]\nOutput: 4\nExplanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is not allowed.\n\nExample 3:\n\nInput: matrix = [[1]]\nOutput: 1\n\n \n\nConstraints:\n\n    m == matrix.length\n    n == matrix[i].length\n    1 <= m, n <= 200\n    0 <= matrix[i][j] <= 231 - 1\n\n",
+    "code": "class Solution:\n    def longestIncreasingPath(self, matrix: List[List[int]]) -> int:\n"
+  },
+  {
+    "id": 14,
+    "topic": "Dynamic Programming",
+    "link": "https://leetcode.com/problems/coin-change",
+    "problem_name": "Coin change",
+    "difficulty": "Medium",
+    "companies": [
+      "Google",
+      "Amazon"
+    ],
+    "content": "You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.\n\nReturn the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.\n\nYou may assume that you have an infinite number of each kind of coin.\n\n \n\nExample 1:\n\nInput: coins = [1,2,5], amount = 11\nOutput: 3\nExplanation: 11 = 5 + 5 + 1\n\nExample 2:\n\nInput: coins = [2], amount = 3\nOutput: -1\n\nExample 3:\n\nInput: coins = [1], amount = 0\nOutput: 0\n\n \n\nConstraints:\n\n    1 <= coins.length <= 12\n    1 <= coins[i] <= 231 - 1\n    0 <= amount <= 104\n\n",
+    "code": "class Solution:\n    def coinChange(self, coins: List[int], amount: int) -> int:\n"
+  }
+]
