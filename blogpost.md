@@ -1,6 +1,6 @@
 ---
 
-## Tired of Solo Interview Prep? I Built an AI Mock Interviewer on Kaggle!
+## Building an AI Interviewer Agent with Google Gemini and LangGraph
 
 Let's be honest: preparing for tech interviews can be tough. You grind LeetCode, watch mock interviews on YouTube, but something's often missing. If you're like me, maybe you don't have tech buddies available 24/7 for practice, or you worry if the feedback you *do* get is actually helpful. Solving problems on your own is one thing, but explaining your thought process under pressure? That's a whole different skill.
 
