@@ -227,4 +227,6 @@ You can find the complete project in my Kaggle Notebook:
 
 [**>>> Mock Technical Interviewer with Gemini & LangGraph <<<**](https://www.kaggle.com/code/maxymrim/mock-technical-interviewer-with-gemini-langgraph)
 
+[**>>> Video Project Breakdown + Demo <<<**](https://www.youtube.com/watch?v=8ct_uJ772Zk)
+
 Give it a try! I'd be thrilled to hear your feedback, suggestions, or ideas in the comments on Kaggle or below! What features would *you* find most helpful?
